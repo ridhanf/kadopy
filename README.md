@@ -13,10 +13,6 @@ is available jointly under the MIT License and the Beerware License. See
 To get started with the app, clone the repo and then:
 
 ```
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
 $ python manage.py runserver
 ```
 
