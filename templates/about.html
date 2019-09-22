@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KADOSILANG | {{subjudul}}</title>
+</head>
+<body>
+  <h1>{{subjudul}} - {{judul}}</h1>
+  <ul>
+    {# template Tags #}
+
+    {% for link,name in nav%}
+      <li>
+        <a href="{{link}}">{{name}}</a>
+      </li>
+    {% endfor%}
+  </ul>
+  <p>
+    Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Est officiis, aliquid 
+    amet natus dicta ipsa? Possimus, blanditiis 
+    voluptatibus fugiat, rerum magni dolore, 
+    vero tempora ab itaque earum voluptates quam velit!
+  </p>
+</body>
+</html>
