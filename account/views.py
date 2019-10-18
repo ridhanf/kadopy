@@ -1,11 +1,12 @@
-# views mysite
+# views about
 
 from django.shortcuts import render
 
+# Create your views here.
 def index(request):
   context = {
-    'judul':'Selamat Datang',
-    'subjudul':'Kadosilang',
+    'judul':'Kadosilang',
+    'subjudul':'Account',
     'nav': [
       ['/','Home'],
       ['/account','Account'],

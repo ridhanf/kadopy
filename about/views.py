@@ -6,12 +6,11 @@ from django.shortcuts import render
 def index(request):
   context = {
     'judul':'Kadosilang',
-    'subjudul':'ABOUT',
+    'subjudul':'About',
     'nav': [
       ['/','Home'],
-      ['/blog','Blog'],
+      ['/account','Account'],
       ['/about','About'],
-      ['/contact','Contact'],
     ]
   }
-  return render(request, 'about.html', context)
+  return render(request, 'index.html', context)
