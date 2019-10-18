@@ -5,7 +5,7 @@ from django.shortcuts import render
 def index(request):
   context = {
     'judul':'KADOSILANG',
-    'subjudul':'Selamat datang di Kadosilang',
+    'subjudul':'Welcome to Kadosilang',
     'nav': [
       ['/','Home'],
       ['/account','Account'],
