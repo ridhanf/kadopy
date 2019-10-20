@@ -1,27 +1,105 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>{{judul}}</title>
-</head>
+  <head>
+    <title>{{title}}</title>
+  </head>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<body>
-  <!-- NAVBAR BEGIN -->
-  {% include 'navbar.html' %}
-  {% block content %}{% endblock %}
-  <!-- NAVBAR END -->
+  <body>
+    <!-- NAVBAR -->
+    <nav id="myNav" class="navbar fixed-top navbar-expand-md">
+      <a class="navbar-brand" href="#">
+        <img style="height:50px" src="{% static 'img/logo.png' %}" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/account">account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">about</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <h1>{{subjudul}}</h1>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-white text-center">
+        <img style="height:200px" src="{% static 'img/logo.png' %}" alt="">
+        <!-- <h1 class="display-4">{{heading}}</h1> -->
+        <!-- <h1 class="display-5">{{subheading}}</h1> -->
+      </div>
+    </div>
 
-  <p>
-    Lorem ipsum dolor sit amet consectetur
-    adipisicing elit. Est officiis, aliquid
-    amet natus dicta ipsa? Possimus, blanditiis
-    voluptatibus fugiat, rerum magni dolore,
-    vero tempora ab itaque earum voluptates quam velit!
-  </p>
-</body>
+    <!-- CONTENT -->
+    <div class="container-fluid">
+      <!-- CONTENT 1 -->
+      <div id="myBody" class="container bg-white text-success shadow">
+        <div class="row" style="height:400px">
+          <nav>
+            <ul>
+              <li>
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="..." alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="..." alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- CONTENT 2 -->
+      <div class="container bg-success text-white shadow">
+        <div class="row" style="height:400px">
+          <h1>content 2</h1>
+        </div>
+      </div>
+      <!-- CONTENT 3 -->
+      <div class="container bg-white text-success shadow">
+        <div class="row" style="height:400px">
+          <h1>content 3</h1>
+        </div>
+      </div>
+      <!-- CONTENT 4 -->
+      <div class="container bg-success text-white shadow">
+        <div class="row" style="height:400px">
+          <h1>content 4</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
+    <script src="{% static 'js/scrolling.js' %}"></script>
+  </body>
 
 </html>
